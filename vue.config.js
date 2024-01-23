@@ -8,5 +8,5 @@ module.exports = defineConfig({
 
   publicPath: '/fp_pwa_with_ruffle',
   outputDir: 'docs'
-  baseurl: ""
+  baseurl: "/fp_pwa_with_ruffle"
 })
