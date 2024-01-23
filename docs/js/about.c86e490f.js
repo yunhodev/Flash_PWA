@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkfp_pwa_with_ruffle"]=self["webpackChunkfp_pwa_with_ruffle"]||[]).push([[443],{833:function(n,u,t){t.r(u),t.d(u,{default:function(){return p}});var a=t(3396);const e={class:"about"},r=(0,a._)("h1",null,"This is an about page",-1),f=[r];function s(n,u){return(0,a.wg)(),(0,a.iD)("div",e,f)}var i=t(89);const c={},l=(0,i.Z)(c,[["render",s]]);var p=l}}]);
+//# sourceMappingURL=about.c86e490f.js.map
