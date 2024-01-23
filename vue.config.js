@@ -6,6 +6,6 @@ module.exports = defineConfig({
     name: 'fp_pwa_with_ruffle'
   },
 
-  publicPath: '/fp_pwa_with_ruffle/',
+  publicPath: '/fp_pwa_with_ruffle',
   outputDir: 'docs'
 })
