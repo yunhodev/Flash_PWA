@@ -4,13 +4,13 @@
     <!-- Responsive navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="/fp_pwa_with_ruffle/#/" @click="setCurrent('home')">fp_pwa_with_ruffle</a>
+                <a class="navbar-brand" href="/#/" @click="setCurrent('home')">fp_pwa_with_ruffle</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" :class="{ active: homeCurrnent}" @click="setCurrent('home')" aria-current="page" href="/fp_pwa_with_ruffle/#/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" :class="{ active: gamesCurrent}" @click="setCurrent('games')" href="/fp_pwa_with_ruffle/#/games">Games</a></li>
-                        <li class="nav-item"><a class="nav-link" :class="{ active: siteInfoCurrnent}" @click="setCurrent('siteInfo')" href="/fp_pwa_with_ruffle/#/siteInfo">Site Info</a></li>
+                        <li class="nav-item"><a class="nav-link" :class="{ active: homeCurrnent}" @click="setCurrent('home')" aria-current="page" href="/#/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" :class="{ active: gamesCurrent}" @click="setCurrent('games')" href="/#/games">Games</a></li>
+                        <li class="nav-item"><a class="nav-link" :class="{ active: siteInfoCurrnent}" @click="setCurrent('siteInfo')" href="/#/siteInfo">Site Info</a></li>
                         <!-- Login button and profile btn
                         <li class="nav-item" @click="setCurrent('other')" v-if="!isLogin"><a class="btn btn-light" href="/#/sign%20in">Sign in</a></li>
                         <li v-if="isLogin" class="nav-item dropdown">
