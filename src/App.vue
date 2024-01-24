@@ -9,7 +9,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" :class="{ active: homeCurrnent}" @click="setCurrent('home')" aria-current="page" href="/#/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" :class="{ active: gamesCurrent}" @click="setCurrent('games')" href="/#/games">Games</a></li>
+                        <li class="nav-item"><a class="nav-link" :class="{ active: flashesCurrent}" @click="setCurrent('flashes')" href="/#/flashes">Flashes</a></li>
                         <li class="nav-item"><a class="nav-link" :class="{ active: siteInfoCurrnent}" @click="setCurrent('siteInfo')" href="/#/siteInfo">Site Info</a></li>
                         <!-- Login button and profile btn
                         <li class="nav-item" @click="setCurrent('other')" v-if="!isLogin"><a class="btn btn-light" href="/#/sign%20in">Sign in</a></li>
@@ -51,12 +51,12 @@ document.body.append(currentUrl)  */
 })  */
 // var isLogin = ref(false)
 var homeCurrnent = ref(false)
-var gamesCurrent = ref(false)
+var flashesCurrent = ref(false)
 var siteInfoCurrnent = ref(false)
 var otherCurrent = ref(false)
 function setCurrent (page) {
   page === 'home' ? homeCurrnent.value = true : homeCurrnent.value = false
-  page === 'games' ? gamesCurrent.value = true : gamesCurrent.value = false
+  page === 'flashes' ? flashesCurrent.value = true : flashesCurrent.value = false
   page === 'siteInfo' ? siteInfoCurrnent.value = true : siteInfoCurrnent.value = false
   page === 'other' ? otherCurrent.value = true : otherCurrent.value = false
 }

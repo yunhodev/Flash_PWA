@@ -8,12 +8,16 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/games',
-    name: 'games',
+    path: '/flashes',
+    name: 'flashes',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "games" */ '../views/GamesView.vue')
+    component: () => import(/* webpackChunkName: "flashes" */ '../views/FlashesView.vue')
+  }, {
+    path: '/flashes/:swf_name',
+    name: 'flashplayer',
+    component: () => import('../views/FlashPlayerView.vue')
   }
 ]
 

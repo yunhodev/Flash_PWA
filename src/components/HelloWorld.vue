@@ -32,13 +32,17 @@
   </div>
 </template>
 
-<script>
-export default {
+<script setup>
+/* export default {
   name: 'HelloWorld',
   props: {
     msg: String
   }
-}
+} */
+const props = defineProps({
+  msg: String
+})
+var msg = props.msg
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
