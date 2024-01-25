@@ -3,9 +3,9 @@ module.exports = defineConfig({
   transpileDependencies: true,
 
   pwa: {
-    name: 'fp_pwa_with_ruffle'
+    name: 'Flash_PWA'
   },
 
-  publicPath: '/fp_pwa_with_ruffle',
+  publicPath: '/Flash_PWA/',
   outputDir: 'docs'
 })
