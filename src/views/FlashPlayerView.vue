@@ -1,16 +1,22 @@
 <template>
     <div class="about">
       <h1>This is an flashes page<br>(developing...)</h1>
+      <p>{{ $route.params.swf_name }}</p>
     </div>
     <router-link />
 </template>
 
 <script setup>
-const props = defineProps({
+// from { $route } import 'vue-router'
+/* const props = defineProps({
   swf_name: String
-})
-var flashName = props.swf_name
-alert(flashName)
+}) */
+/* const swf = props.swf_name
+document.body.append(swf) */
+/* var flashName = props.swf_name
+document.body.append(flashName)
+const swf = $route.params.swf_name
+document.body.append('params from vue-router: ' + swf) */
 </script>
 
 <style>
