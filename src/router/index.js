@@ -6,6 +6,9 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView
+    meta: {
+      title: "Flash_PWA"
+    }
   },
   {
     path: '/flashes',
