@@ -14,12 +14,31 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "flashes" */ '../views/FlashesView.vue')
-  }, {
-    path: '/flashes/:swf_name',
+  },
+  {
+    path: '/flashplayer',
     name: 'flashplayer',
+    component: () => import('../views/FlashPlayerView.vue')
+    // props: (route) => ({ query: route.query })
+  },
+  {
+    path: '/flashes/:swf_name',
+    name: 'flashplayer_name',
     component: () => import('../views/FlashPlayerView.vue')
   }
 ]
+
+/*
+const router = new VueRouter({
+  routes: [
+    {
+      path: '/user',
+      component: User,
+      props: (route) => ({ query: route.query })
+    }
+  ]
+})
+*/
 
 const router = createRouter({
   history: createWebHashHistory(),
