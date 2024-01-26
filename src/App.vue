@@ -4,7 +4,7 @@
     <!-- Responsive navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="#/" @click="setCurrent('home')">fp_pwa_with_ruffle</a>
+                <a class="navbar-brand" href="#/" @click="setCurrent('home')">Flash_PWA</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -32,7 +32,7 @@
   <router-view/>
   <!-- Footer-->
   <div class="mt-auto">
-    <footer class="py-5 bg-dark">
+    <footer class="py-5 bg-dark mt-4">
       <div class="container"><p class="m-0 text-center text-white">Copyright &copy; YunhoDev 2024</p></div>
     </footer>
   </div>

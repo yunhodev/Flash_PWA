@@ -20,11 +20,6 @@ const routes = [
     name: 'flashplayer',
     component: () => import('../views/FlashPlayerView.vue')
     // props: (route) => ({ query: route.query })
-  },
-  {
-    path: '/flashes/:swf_name',
-    name: 'flashplayer_name',
-    component: () => import('../views/FlashPlayerView.vue')
   }
 ]
 
