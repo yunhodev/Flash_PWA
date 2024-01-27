@@ -13,7 +13,7 @@
     <div class="row">
       <!-- Blog entries-->
       <div class="col-lg-12">
-        <!-- Featured blog post-->
+        <!-- Description and link to flashes -->
         <div class="card">
           <a href="#!"><img class="card-img-top" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." /></a>
           <div class="card-body">
