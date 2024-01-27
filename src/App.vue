@@ -4,13 +4,13 @@
     <!-- Responsive navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="#/" @click="setCurrent('home')">Flash_PWA</a>
+                <a class="navbar-brand" href="#/">Flash_PWA</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" :class="{ active: homeCurrnent}" @click="setCurrent('home')" aria-current="page" href="#/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" :class="{ active: flashesCurrent}" @click="setCurrent('flashes')" href="#/flashes">Flashes</a></li>
-                        <li class="nav-item"><a class="nav-link" :class="{ active: siteInfoCurrnent}" @click="setCurrent('siteInfo')" href="#/siteInfo">Site Info</a></li>
+                        <li class="nav-item"><a class="nav-link" :class="{ active: homeCurrnent}" aria-current="page" href="#/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" :class="{ active: flashesCurrent}" href="#/flashes">Flashes</a></li>
+                        <li class="nav-item"><a class="nav-link" :class="{ active: siteInfoCurrnent}" href="#/siteInfo">Site Info</a></li>
                         <!-- Login button and profile btn
                         <li class="nav-item" @click="setCurrent('other')" v-if="!isLogin"><a class="btn btn-light" href="/#/sign%20in">Sign in</a></li>
                         <li v-if="isLogin" class="nav-item dropdown">
@@ -40,16 +40,51 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-//  const currentPath = ref(window.location.hash)
+
+</script>
+<!--
+<script>
+import '@/assets/js/app'
+// import { ref } from 'vue'
+/* var currentUrl = ref(window.location.hash)
+var homeCurrnent = ref(false)
+var flashesCurrent = ref(false)
+var siteInfoCurrnent = ref(false)
+var otherCurrent = ref(false)
+function setCurrent (page) {
+  page === 'home' ? homeCurrnent.value = true : homeCurrnent.value = false
+  page === 'flashes' ? flashesCurrent.value = true : flashesCurrent.value = false
+  page === 'siteInfo' ? siteInfoCurrnent.value = true : siteInfoCurrnent.value = false
+  page === 'other' ? otherCurrent.value = true : otherCurrent.value = false
+}
+if (currentUrl.value === '#/') {
+  setCurrent('home')
+} else if (currentUrl.value === '#/games') {
+  setCurrent('games')
+} else if (currentUrl.value === '#/siteInfo') {
+  setCurrent('siteInfo')
+} else {
+  setCurrent('other')
+} */
+export default {
+  name: 'app',
+  watch: {
+    '$route' (to, from) {
+      // console.log(to, from)
+      if (to.fullPath === '/') {
+        return {
+          homeCurrnent: true
+        }
+      }
+    }
+  }
+}
+</script>
+-->
+<script defer setup>
+import { ref, watch } from 'vue'
+// import VueRouter from 'vue-router'
 var currentUrl = ref(window.location.hash)
-//  alert(currentUrl.value)
-/*  var currentUrl = window.location.href
-document.body.append(currentUrl)  */
-/*  window.addEventListener('hashchange', () => {
-  currentPath.value = window.location.hash
-})  */
-// var isLogin = ref(false)
 var homeCurrnent = ref(false)
 var flashesCurrent = ref(false)
 var siteInfoCurrnent = ref(false)
@@ -69,6 +104,21 @@ if (currentUrl.value === '#/') {
 } else {
   setCurrent('other')
 }
+watch(
+  () => window.location,
+  (hash) => {
+    if (currentUrl.value === '#/') {
+      setCurrent('home')
+      console.log(window.location.href)
+    } else if (currentUrl.value === '#/games') {
+      setCurrent('games')
+    } else if (currentUrl.value === '#/siteInfo') {
+      setCurrent('siteInfo')
+    } else {
+      setCurrent('other')
+    }
+  }
+)
 </script>
 
 <style>
