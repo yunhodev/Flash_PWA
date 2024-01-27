@@ -81,10 +81,10 @@ export default {
 }
 </script>
 -->
-<script defer setup>
+<script setup>
 import { ref, watch } from 'vue'
-// import VueRouter from 'vue-router'
-var currentUrl = ref(window.location.hash)
+import { useRoute } from 'vue-router'
+const route = useRoute()
 var homeCurrnent = ref(false)
 var flashesCurrent = ref(false)
 var siteInfoCurrnent = ref(false)
@@ -95,25 +95,23 @@ function setCurrent (page) {
   page === 'siteInfo' ? siteInfoCurrnent.value = true : siteInfoCurrnent.value = false
   page === 'other' ? otherCurrent.value = true : otherCurrent.value = false
 }
-if (currentUrl.value === '#/') {
-  setCurrent('home')
-} else if (currentUrl.value === '#/games') {
-  setCurrent('games')
-} else if (currentUrl.value === '#/siteInfo') {
-  setCurrent('siteInfo')
-} else {
-  setCurrent('other')
+function defaultSet () {
+  const currentUrl = ref(route.path)
+  if (currentUrl.value === '/') {
+    setCurrent('home')
+  }
 }
+defaultSet()
+console.log(window.location.href)
 watch(
-  () => window.location,
-  (hash) => {
-    console.log(hash)
-    if (hash === '#/') {
+  () => route.path,
+  (to, from) => {
+    console.log(to)
+    if (to === '/') {
       setCurrent('home')
-      console.log(window.location.href)
-    } else if (hash === '#/games') {
-      setCurrent('games')
-    } else if (hash === '#/siteInfo') {
+    } else if (to === '/flashes') {
+      setCurrent('flashes')
+    } else if (to === '/siteInfo') {
       setCurrent('siteInfo')
     } else {
       setCurrent('other')

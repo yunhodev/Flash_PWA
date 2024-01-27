@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkfp_pwa_with_ruffle"]=self["webpackChunkfp_pwa_with_ruffle"]||[]).push([[332],{89:function(n,t){t.Z=(n,t)=>{const e=n.__vccOpts||n;for(const[r,f]of t)e[r]=f;return e}},1931:function(n,t,e){e.r(t),e.d(t,{default:function(){return l}});var r=e(3396);const f={class:"about"},s=(0,r._)("h1",null,[(0,r.Uk)("This is an flashes page"),(0,r._)("br"),(0,r.Uk)("(developing...)")],-1),u=[s];function c(n,t){return(0,r.wg)(),(0,r.iD)("div",f,u)}var a=e(89);const i={},o=(0,a.Z)(i,[["render",c]]);var l=o}}]);
-//# sourceMappingURL=flashes.3b93eb5d.js.map
