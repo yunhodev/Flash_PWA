@@ -107,12 +107,13 @@ if (currentUrl.value === '#/') {
 watch(
   () => window.location,
   (hash) => {
-    if (currentUrl.value === '#/') {
+    console.log(hash)
+    if (hash === '#/') {
       setCurrent('home')
       console.log(window.location.href)
-    } else if (currentUrl.value === '#/games') {
+    } else if (hash === '#/games') {
       setCurrent('games')
-    } else if (currentUrl.value === '#/siteInfo') {
+    } else if (hash === '#/siteInfo') {
       setCurrent('siteInfo')
     } else {
       setCurrent('other')
