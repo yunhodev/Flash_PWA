@@ -1,18 +1,23 @@
 <template>
     <div class="about">
       <h1>This is an flash player page.<br>(developing...)</h1>
-      <h2 style="display:none;" id="swfName">{{ $route.query.swf }}</h2>
     </div>
     <router-link />
 </template>
 
 <script setup>
-window.onload = function () {
-  var swfName = document.getElementById('swfName').innerText
-  window.alert(swfName)
-  // document.body.append(this.$route.query.swf)
+/* eslint-disable */
+import { ref } from 'vue'
+import { useRoute } from 'vue-router'
+import '@/assets/js/ruffle/ruffle'
+window.onload = function ()
+{
+const route = useRoute()
+const swfPath = ref('@/assets/swf/')
+swfPath.value += route.query.swf
+swfPath.value += '.swf'
+alert(swfPath)
 }
-
 /* const props = defineProps({
   swf: String
 })

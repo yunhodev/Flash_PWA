@@ -2,7 +2,7 @@
   <!-- Page header with logo and tagline-->
   <header class="py-5 bg-light border-bottom mb-4">
     <div class="container">
-      <div class="text-center my-5">
+      <div class="text-center my-1">
         <h1 class="fw-bolder">Flash Player PWA(DEMO)</h1>
         <p class="lead mb-0">Run flash on browser. You can also use this application offline!</p>
       </div>
@@ -11,9 +11,9 @@
   <!-- Page content-->
   <div class="container">
     <div class="row">
-      <!-- Blog entries-->
+      <!-- Cards entries-->
       <div class="col-lg-12">
-        <!-- Description and link to flashes -->
+        <!-- Description and link to flashes page -->
         <div class="card">
           <a href="#!"><img class="card-img-top" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." /></a>
           <div class="card-body">
