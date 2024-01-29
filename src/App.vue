@@ -102,7 +102,7 @@ function defaultSet () {
   }
 }
 defaultSet()
-console.log(window.location.href)
+console.log(route)
 watch(
   () => route.path,
   (to, from) => {
