@@ -8,10 +8,10 @@
           <!-- Swf title-->
           <h1 class="fw-bolder mb-1">{{ swfName }}</h1>
           <!-- Swf meta content-->
-          <div class="text-muted fst-italic mb-2">Upload on January, 2024</div>
+          <div class="text-muted fst-italic mb-2">Uploaded on January, 2024</div>
         </header>
-        <!-- swf container -->
-        <div class="swf_container"></div>
+        <!-- swf -->
+        <div class="my-1"><RufflePlayer :swfPath="swfPath" /></div>
       </article>
     </div>
   </div>
@@ -20,9 +20,10 @@
 
 <script setup>
 /* eslint-disable */
+import RufflePlayer from '@/components/RufflePlayer.vue'
 import { ref, computed, onBeforeMount } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import '@/assets/js/ruffle/ruffle.js'
+// import '@/assets/js/ruffle/ruffle.js'
 const route = useRoute()
 const router = useRouter()
 const swf = route.query.swf
@@ -32,16 +33,6 @@ function capitalize(word) {
 }
 const swfName = ref(capitalize(swf))
 // alert(swfPath)
-window.onload = function () {
-  window.RufflePlayer = ruffle.RufflePlayer || {};
-  window.addEventListener("load", (event) => {
-    const ruffle = window.RufflePlayer.newest();
-    const player = ruffle.createPlayer();
-    const container = document.getElementById("swf_container");
-    container.appendChild(player);
-    player.load(swfPath);
-  });
-}
 /*
 const swfPath = ref('@/assets/swf/')
 swfPath.value += route.query.swf

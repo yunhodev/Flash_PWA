@@ -1212,6 +1212,11 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
+"@ruffle-rs/ruffle@^0.1.0-nightly.2024.1.29":
+  version "0.1.0-nightly.2024.1.29"
+  resolved "https://registry.yarnpkg.com/@ruffle-rs/ruffle/-/ruffle-0.1.0-nightly.2024.1.29.tgz#e9b28622ef67e07741c508043d41fff6749d9f0c"
+  integrity sha512-2HTa6eoibXDWWICXhkO7EI2pwmwTwVkuSQkvDIbqtLcpMaAYa6HeDhaxE7Bip09dh38s8rcO3bva26mZMPmXlA==
+
 "@sideway/address@^4.1.4":
   version "4.1.4"
   resolved "https://registry.yarnpkg.com/@sideway/address/-/address-4.1.4.tgz#03dccebc6ea47fdc226f7d3d1ad512955d4783f0"

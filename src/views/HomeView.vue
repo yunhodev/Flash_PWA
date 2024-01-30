@@ -18,7 +18,7 @@
           <a href="#!"><img class="card-img-top" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." /></a>
           <div class="card-body">
             <h2 class="card-title">Run flash on browser!</h2>
-            <p class="card-text">The site is designed to run Flash on the web. The source code is located on GitHub, and is distributed under the MIT License. It operates using the ruffle flash emulator, and version and license information can be found on the Site Info page. It is built as a progressive web app and works offline.</p>
+            <p class="card-text">The site is designed to run Flash on the web. The source code is located on GitHub, and is distributed under the MIT License. It operates using the ruffle flash emulator. It is built as a progressive web app and works offline.</p>
             <a class="btn btn-primary" href="#/flashes">View available flash files →</a>
           </div>
         </div>
