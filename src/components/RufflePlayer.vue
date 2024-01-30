@@ -13,22 +13,24 @@ const props = defineProps({
 alert(props.swfPath)
 const swfPath = props.swfPath
 
+/* eslint-disable */
+// window.onload = function () {
+window.RufflePlayer = window.RufflePlayer || {}
+window.addEventListener("load", (event) => {
+  const ruffle = window.RufflePlayer.newest()
+  const player = ruffle.createPlayer()
+  const container = document.getElementById("swf_container")
+  player.width = 95%
+  container.appendChild(player)
+  player.load(swfPath)
+})
+
 // RufflePlayer 객체를 가져옵니다.
 const ruffle = window.RufflePlayer.newest()
 
 // 플래시 콘텐츠를 표시할 div 요소의 참조를 생성합니다.
 const flashDiv = document.getElementById('swf_container')
-/* eslint-disable */
-// window.onload = function () {
-  window.RufflePlayer = window.RufflePlayer || {}
-  window.addEventListener("load", (event) => {
-    const ruffle = window.RufflePlayer.newest()
-    const player = ruffle.createPlayer()
-    const container = document.getElementById("swf_container")
-    player.width = 75%
-    container.appendChild(player)
-    player.load(swfPath)
-  })
+
 // }
 /*
 setTimeout(function () {
