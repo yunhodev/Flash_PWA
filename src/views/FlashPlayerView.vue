@@ -27,7 +27,7 @@ import { useRoute, useRouter } from 'vue-router'
 const route = useRoute()
 const router = useRouter()
 const swf = route.query.swf
-const swfPath = '@/assets/swf/' + swf + '.swf'
+const swfPath = 'swf/' + swf + '.swf'
 function capitalize(word) {
   return word.charAt(0).toUpperCase() + word.slice(1)
 }
