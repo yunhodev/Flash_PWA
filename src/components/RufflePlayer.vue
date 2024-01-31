@@ -1,6 +1,5 @@
 <template>
-    <div id="swf_container">
-    </div>
+    <div class="text-center" id="swf_container"></div>
 </template>
 
 <script setup>
@@ -20,7 +19,7 @@ window.addEventListener("load", (event) => {
   const ruffle = window.RufflePlayer.newest()
   const player = ruffle.createPlayer()
   player.style.width = '70vw'
-  player.style.height = '50vw'
+  player.style.height = '52.5vw'
   const container = document.getElementById("swf_container")
   container.appendChild(player)
   player.load(swfPath)
