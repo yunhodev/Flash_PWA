@@ -34,7 +34,7 @@ function capitalize(word) {
 const swfName = ref(capitalize(swf))
 // alert(swfPath)
 /*
-const swfPath = ref('@/assets/swf/')
+const swfPath = ref('/')
 swfPath.value += route.query.swf
 swfPath.value += '.swf'
 alert(swfPath)
