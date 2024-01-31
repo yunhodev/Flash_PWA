@@ -5,17 +5,17 @@
 
 <script setup>
 /* eslint-disable */
+import '@ruffle-rs/ruffle'
 import { onMounted, defineProps } from 'vue'
 
 const props = defineProps({
   swfPath: String
 })
-alert(props.swfPath)
 const swfPath = props.swfPath
 
 /* eslint-disable */
-window.onload = function () {
-setTimeout(function () {
+
+
 alert('loading')
 window.RufflePlayer = window.RufflePlayer || {}
 window.addEventListener("load", (event) => {
@@ -25,8 +25,8 @@ window.addEventListener("load", (event) => {
   container.appendChild(player)
   player.load(swfPath)
 })
-}, 1500)
-}
+
+
 /*
 // RufflePlayer 객체를 가져옵니다.
 const ruffle = window.RufflePlayer.newest()

@@ -20,6 +20,11 @@ const routes = [
     name: 'flashplayer',
     component: () => import('../views/FlashPlayerView.vue')
     // props: (route) => ({ query: route.query })
+  },
+  {
+    path: '/siteinfo',
+    name: 'siteinfo',
+    component: () => import('../views/SiteInfoView.vue')
   }
 ]
 

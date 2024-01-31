@@ -15,7 +15,7 @@ import '@webassemblyjs/helper-buffer'
 */
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
-import '@ruffle-rs/ruffle'
+// import '@ruffle-rs/ruffle'
 import { Buffer } from 'buffer'
 
 // WebAssembly.instantiateStreaming(fetch("@/assets/ruffle/.wasm"))
