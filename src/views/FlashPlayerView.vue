@@ -12,6 +12,7 @@
         </header>
         <!-- swf -->
         <div class="my-1"><RufflePlayer :swfPath="swfPath" /></div>
+        <p>Please reload page if Flash player doesn't loaded</p>
       </article>
     </div>
   </div>
