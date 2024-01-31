@@ -7,5 +7,16 @@ module.exports = defineConfig({
   },
 
   publicPath: '/Flash_PWA/',
-  outputDir: 'docs'
+  outputDir: 'docs',
+
+  configureWebpack: {
+    module: {
+      rules: [
+        {
+          test: /\.wasm$/,
+          loaders: ["webassemblyjs"]
+        }
+      ]
+    }
+  }
 })
