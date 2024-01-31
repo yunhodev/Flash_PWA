@@ -4,7 +4,7 @@
       <!-- swf content-->
       <article>
         <!-- swf header-->
-        <header class="mb-4">
+        <header class="">
           <!-- Swf title-->
           <h1 class="fw-bolder mb-1">{{ swfName }}</h1>
           <!-- Swf meta content-->

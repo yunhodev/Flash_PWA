@@ -19,6 +19,8 @@ window.RufflePlayer = window.RufflePlayer || {}
 window.addEventListener("load", (event) => {
   const ruffle = window.RufflePlayer.newest()
   const player = ruffle.createPlayer()
+  player.style.width = '70vw'
+  player.style.height = '50vw'
   const container = document.getElementById("swf_container")
   container.appendChild(player)
   player.load(swfPath)
