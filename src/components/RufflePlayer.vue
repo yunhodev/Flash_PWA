@@ -14,7 +14,7 @@ const props = defineProps({
 const swfPath = props.swfPath
 
 /* eslint-disable */
-window.onload = function() {
+
 window.RufflePlayer = window.RufflePlayer || {}
 window.addEventListener("load", (event) => {
   const ruffle = window.RufflePlayer.newest()
@@ -23,7 +23,7 @@ window.addEventListener("load", (event) => {
   container.appendChild(player)
   player.load(swfPath)
 })
-}
+
 
 /*
 // RufflePlayer 객체를 가져옵니다.
