@@ -1,5 +1,5 @@
 <template>
-  <div class="container card py-5 mb-4 my-3">
+  <div class="card py-5 my-3 mx-3">
     <div class="col-lg-12">
       <!-- swf content-->
       <article>
@@ -11,7 +11,7 @@
           <div class="text-muted fst-italic mb-2">Uploaded on January, 2024</div>
         </header>
         <!-- swf -->
-        <div class="my-1"><RufflePlayer :swfPath="swfPath" /></div>
+        <div><RufflePlayer class="table-cell mx-3" :swfPath="swfPath" /></div>
         <p v-if="isNotReloaded">Please <a :href="currentLocation" @click="$router.go()"><i>click here</i></a> to reload page if Flash player doesn't loaded</p>
       </article>
     </div>

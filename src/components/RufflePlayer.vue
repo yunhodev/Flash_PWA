@@ -1,5 +1,5 @@
 <template>
-    <div class="table-cell" id="swf_container"></div>
+    <div id="swf_container"></div>
 </template>
 
 <script setup>
@@ -21,10 +21,12 @@ window.RufflePlayer = window.RufflePlayer || {}
 window.addEventListener("load", (event) => {
   const ruffle = window.RufflePlayer.newest()
   const player = ruffle.createPlayer()
-  player.style.width = '67vw'
-  player.style.height = '50.25vw'
   const container = document.getElementById("swf_container")
+  player.style.width = '82.5vw'
+  player.style.height = '45vw'
   container.appendChild(player)
+  player.class = 'card table-cell'
+  player.id = 'ruffle-player'
   player.load(swfPath)
 })
 
