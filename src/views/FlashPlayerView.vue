@@ -12,7 +12,7 @@
         </header>
         <!-- swf -->
         <div class="my-1"><RufflePlayer :swfPath="swfPath" /></div>
-        <p>Please reload page if Flash player doesn't loaded</p>
+        <p v-if="isNotReloaded">Please <a :href="currentLocation" @click="$router.go()"><i>click here</i></a> to reload page if Flash player doesn't loaded</p>
       </article>
     </div>
   </div>
@@ -23,34 +23,23 @@
 /* eslint-disable */
 import RufflePlayer from '@/components/RufflePlayer.vue'
 import { ref, computed, onBeforeMount } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 // import '@/assets/js/ruffle/ruffle.js'
+const currentLocation = ref(window.location.href)
 const route = useRoute()
-const router = useRouter()
 const swf = route.query.swf
 const swfPath = 'swf/' + swf + '.swf'
 function capitalize(word) {
   return word.charAt(0).toUpperCase() + word.slice(1)
 }
+
 const swfName = ref(capitalize(swf))
-// alert(swfPath)
-/*
-const swfPath = ref('/')
-swfPath.value += route.query.swf
-swfPath.value += '.swf'
-alert(swfPath)
-*/
-/* const props = defineProps({
-  swf: String
-})
-var flashName = props.swf */
-// alert(flashName)
-/* import { $router } from 'vue'
-const flashName = $router.params.swf_name
-alert(flashName)
-console.log(flashName)
-document.body.append(flashName) */
-// document.body.append(this.$route.query.q)
+let isNotReloaded = ref(false)
+if (route.query.reloaded) {
+  isNotReloaded = ref(false)
+} else {
+  isNotReloaded = ref(true)
+}
 </script>
 
 <style>

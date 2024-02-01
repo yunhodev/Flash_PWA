@@ -18,8 +18,11 @@ const routes = [
   {
     path: '/flashplayer',
     name: 'flashplayer',
-    component: () => import('../views/FlashPlayerView.vue')
+    component: () => import('../views/FlashPlayerView.vue'),
     // props: (route) => ({ query: route.query })
+    meta: {
+      reload: true
+    }
   },
   {
     path: '/siteinfo',
