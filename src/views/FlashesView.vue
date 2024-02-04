@@ -46,7 +46,7 @@
           <a href="#/flashplayer?swf=sword_enchanting_m"><img class="card-img-top" src="images/sword_enchanting_m.png" alt="Picture of swf" /></a>
           <div class="card-body">
             <!-- SWF's name -->
-            <h2 class="card-title">Sword Enchanging</h2>
+            <h2 class="card-title">Sword Enchanting</h2>
             <!-- Description for swf -->
             <p class="card-text"></p>
             <a class="btn btn-primary" href="#/flashplayer?swf=sword_enchanting_m">Play Now →</a>

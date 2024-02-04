@@ -12,6 +12,16 @@
   <div class="container">
     <div class="row">
       <!-- Cards entries-->
+      <div class="col-lg-12 py-5">
+        <!-- Description and link to flashes page -->
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">&#9888; Notice</h2><hr>
+            <p class="card-text">This site is under development and the service worker is currently not set up properly, so when used offline, the flash player and swf files may not be loaded properly.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Cards entries-->
       <div class="col-lg-12">
         <!-- Description and link to flashes page -->
         <div class="card">
