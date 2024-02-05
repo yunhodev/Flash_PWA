@@ -60,7 +60,6 @@ function defaultSet () {
   }
 }
 defaultSet()
-console.log(route)
 watch(
   () => route.path,
   (to, from) => {

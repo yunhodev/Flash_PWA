@@ -3,7 +3,11 @@ module.exports = defineConfig({
   transpileDependencies: true,
 
   pwa: {
-    name: 'Flash_PWA'
+    name: 'Flash_PWA',
+    workboxPluginMode: "InjectManifest",
+    workboxOptions:{
+      swSrc: "./src/service-worker.js"
+    }
   },
 
   publicPath: '/Flash_PWA/',
