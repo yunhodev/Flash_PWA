@@ -1,5 +1,7 @@
 # fp_pwa_with_ruffle
 
+## Flash Player Progressive Web app made with vue3
+
 ## Project setup
 ```
 yarn install
