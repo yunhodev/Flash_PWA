@@ -1,4 +1,4 @@
-# fp_pwa_with_ruffle
+# Flash_PWA
 
 ## Flash Player Progressive Web app made with vue3
 
